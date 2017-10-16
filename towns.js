@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$('#btnDelete').click(deleteTown);
 	$('#btnAdd').click(addTown);
-	$('#btnShuffle).click(shuffleTowns);
+	$('#btnShuffle').click(shuffleTowns);
 });
 
 function deleteTown() {
@@ -31,7 +31,7 @@ function addTown() {
 	let townName = $('#townNameForAdd').val();
 	$('#townNameForAdd').val('');
 	$('#towns').append($('<option>').text(townName));
-	$('#result').text(townName + " added.");
+	showMessage(townName + " added.");
 }
 
 function shuffleTowns() {
